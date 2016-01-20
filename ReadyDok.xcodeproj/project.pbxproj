@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A676BB041C4F3DC1001244EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB031C4F3DC1001244EF /* AppDelegate.swift */; };
-		A676BB061C4F3DC1001244EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB051C4F3DC1001244EF /* ViewController.swift */; };
+		A676BB061C4F3DC1001244EF /* NavigationTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB051C4F3DC1001244EF /* NavigationTableController.swift */; };
 		A676BB091C4F3DC1001244EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676BB071C4F3DC1001244EF /* Main.storyboard */; };
 		A676BB0B1C4F3DC1001244EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676BB0A1C4F3DC1001244EF /* Assets.xcassets */; };
 		A676BB0E1C4F3DC1001244EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676BB0C1C4F3DC1001244EF /* LaunchScreen.storyboard */; };
 		A676BB191C4F3DC1001244EF /* ReadyDokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB181C4F3DC1001244EF /* ReadyDokTests.swift */; };
+		A676BB271C4F450D001244EF /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB261C4F450D001244EF /* NavigationCell.swift */; };
+		A676BB2A1C4F4A86001244EF /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB291C4F4A86001244EF /* ReminderCell.swift */; };
+		A6DBD2681C4F517A002D19BF /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2671C4F517A002D19BF /* Reminder.swift */; };
+		A6DBD26A1C4F52C4002D19BF /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		A676BB001C4F3DC1001244EF /* ReadyDok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadyDok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676BB031C4F3DC1001244EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A676BB051C4F3DC1001244EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A676BB051C4F3DC1001244EF /* NavigationTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTableController.swift; sourceTree = "<group>"; };
 		A676BB081C4F3DC1001244EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A676BB0A1C4F3DC1001244EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A676BB0D1C4F3DC1001244EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		A676BB141C4F3DC1001244EF /* ReadyDokTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadyDokTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676BB181C4F3DC1001244EF /* ReadyDokTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyDokTests.swift; sourceTree = "<group>"; };
 		A676BB1A1C4F3DC1001244EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A676BB261C4F450D001244EF /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
+		A676BB291C4F4A86001244EF /* ReminderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		A6DBD2671C4F517A002D19BF /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +86,13 @@
 			isa = PBXGroup;
 			children = (
 				A676BB031C4F3DC1001244EF /* AppDelegate.swift */,
-				A676BB051C4F3DC1001244EF /* ViewController.swift */,
+				A676BB231C4F3E86001244EF /* Controller */,
 				A676BB071C4F3DC1001244EF /* Main.storyboard */,
 				A676BB0A1C4F3DC1001244EF /* Assets.xcassets */,
 				A676BB0C1C4F3DC1001244EF /* LaunchScreen.storyboard */,
 				A676BB0F1C4F3DC1001244EF /* Info.plist */,
+				A676BB281C4F4557001244EF /* CellView */,
+				A6DBD26B1C4F5312002D19BF /* Model */,
 			);
 			path = ReadyDok;
 			sourceTree = "<group>";
@@ -94,6 +104,32 @@
 				A676BB1A1C4F3DC1001244EF /* Info.plist */,
 			);
 			path = ReadyDokTests;
+			sourceTree = "<group>";
+		};
+		A676BB231C4F3E86001244EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A676BB051C4F3DC1001244EF /* NavigationTableController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A676BB281C4F4557001244EF /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				A676BB291C4F4A86001244EF /* ReminderCell.swift */,
+				A676BB261C4F450D001244EF /* NavigationCell.swift */,
+			);
+			name = CellView;
+			sourceTree = "<group>";
+		};
+		A6DBD26B1C4F5312002D19BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6DBD2671C4F517A002D19BF /* Reminder.swift */,
+				A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A676BB061C4F3DC1001244EF /* ViewController.swift in Sources */,
+				A676BB061C4F3DC1001244EF /* NavigationTableController.swift in Sources */,
 				A676BB041C4F3DC1001244EF /* AppDelegate.swift in Sources */,
+				A676BB271C4F450D001244EF /* NavigationCell.swift in Sources */,
+				A6DBD26A1C4F52C4002D19BF /* NavigationItem.swift in Sources */,
+				A676BB2A1C4F4A86001244EF /* ReminderCell.swift in Sources */,
+				A6DBD2681C4F517A002D19BF /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +426,7 @@
 				A676BB1F1C4F3DC1001244EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A676BB201C4F3DC1001244EF /* Build configuration list for PBXNativeTarget "ReadyDokTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +435,7 @@
 				A676BB221C4F3DC1001244EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
