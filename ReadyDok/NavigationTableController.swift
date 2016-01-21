@@ -63,6 +63,26 @@ class NavigationTableController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
+        if row < reminders.count{
+            // Open Appointment
+            performSegueWithIdentifier("open_appointment", sender: nil)
+        }else if row == reminders.count{
+            // Open My Doctors
+            performSegueWithIdentifier("open_doctor", sender: nil)
+        }else if row == reminders.count + 1{
+            // Open My Reminders
+            performSegueWithIdentifier("open_reminder", sender: nil)
+        }else if row == reminders.count + 2{
+            // Open Promo
+        }else if row == reminders.count + 3{
+            // Open Help
+        }else if row == reminders.count + 4{
+            // Open Settings
+        }
+    }
+    
     func loadData(){
         loadReminders()
         let image = UIImage(named: "Image")!
