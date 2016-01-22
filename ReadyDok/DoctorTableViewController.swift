@@ -10,7 +10,7 @@ import UIKit
 
 class DoctorTableViewController: UITableViewController {
 
-    
+    var doctors = [Doctor]()
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -21,35 +21,58 @@ class DoctorTableViewController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        loadData()
     }
 
+    func loadData(){
+        let image = UIImage(named: "Image")!
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return doctors.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let row = indexPath.row
+        let cell = tableView.dequeueReusableCellWithIdentifier("DoctorTableViewCell", forIndexPath: indexPath) as! DoctorTableViewCell
+        let d = doctors[row]
+        
+        cell.imageDoctor.image = d.image
+        cell.txtNama.text = d.nama
+        cell.txtJabatan.text = d.jabatan
+        cell.txtTempat.text = d.tempat
+        cell.txtAlamat.text = d.alamat
+        
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
+    @IBAction func addDoctor(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("open_search", sender: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
