@@ -12,6 +12,8 @@ import ActionSheetPicker_3_0
 class AddDoctorViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var formSpecialty: UITextField!
+    @IBOutlet weak var formNama: UITextField!
+    @IBOutlet weak var formLocation: UITextField!
     @IBOutlet weak var checkbox: UIButton!
     var useMyLocation = false
     
@@ -53,6 +55,18 @@ class AddDoctorViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func onCancelClicked(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func onSearchClicked(sender: UIButton) {
+        if formNama.text == nil || formNama.text == ""{
+            performSegueWithIdentifier("open_doctor_empty", sender: sender)
+        }else{
+            performSegueWithIdentifier("open_doctor_result", sender: sender)
+        }
+    }
     /*
     // MARK: - Navigation
 

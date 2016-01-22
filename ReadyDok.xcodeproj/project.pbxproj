@@ -25,6 +25,7 @@
 		A68787001C51548F00DCCFA5 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68786FF1C51548F00DCCFA5 /* DoctorTableViewCell.swift */; };
 		A68787021C5159A300DCCFA5 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68787011C5159A300DCCFA5 /* Doctor.swift */; };
 		A68787041C51ED3000DCCFA5 /* AddDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68787031C51ED3000DCCFA5 /* AddDoctorViewController.swift */; };
+		A68787061C52792300DCCFA5 /* DoctorResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68787051C52792300DCCFA5 /* DoctorResultTableViewController.swift */; };
 		A6DBD2681C4F517A002D19BF /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2671C4F517A002D19BF /* Reminder.swift */; };
 		A6DBD26A1C4F52C4002D19BF /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		A68786FF1C51548F00DCCFA5 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
 		A68787011C5159A300DCCFA5 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A68787031C51ED3000DCCFA5 /* AddDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDoctorViewController.swift; sourceTree = "<group>"; };
+		A68787051C52792300DCCFA5 /* DoctorResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorResultTableViewController.swift; sourceTree = "<group>"; };
 		A6DBD2671C4F517A002D19BF /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 		F39161E97FF73EFEE645C6AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				A615E3691C50D25600BAC808 /* ReminderDetailTableViewController.swift */,
 				A615E3711C510BC100BAC808 /* AppointmentViewController.swift */,
 				A68787031C51ED3000DCCFA5 /* AddDoctorViewController.swift */,
+				A68787051C52792300DCCFA5 /* DoctorResultTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A615E3721C510BC100BAC808 /* AppointmentViewController.swift in Sources */,
+				A68787061C52792300DCCFA5 /* DoctorResultTableViewController.swift in Sources */,
 				A615E3701C50F78500BAC808 /* ReminderDetail.swift in Sources */,
 				A615E3601C50C19500BAC808 /* SWRevealViewController.m in Sources */,
 				A68787041C51ED3000DCCFA5 /* AddDoctorViewController.swift in Sources */,
