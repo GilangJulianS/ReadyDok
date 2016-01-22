@@ -73,6 +73,12 @@ class DoctorTableViewController: UITableViewController {
     @IBAction func addDoctor(sender: UIBarButtonItem) {
         performSegueWithIdentifier("open_search", sender: nil)
     }
+    
+    @IBAction func unwindToDoctorList(sender: UIStoryboardSegue){
+        if let _ = sender.sourceViewController as? DoctorNotFoundViewController{
+            
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

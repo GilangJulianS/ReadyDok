@@ -5,6 +5,7 @@ use_frameworks!
 
 pod 'ActionSheetPicker-3.0'
 pod 'DLRadioButton'
+pod 'NMPopUpViewSwift'
 
 target 'ReadyDok' do
 

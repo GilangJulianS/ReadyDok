@@ -1,13 +1,16 @@
 PODS:
   - ActionSheetPicker-3.0 (2.0.4)
   - DLRadioButton (1.4.5)
+  - NMPopUpViewSwift (3.0.1)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
   - DLRadioButton
+  - NMPopUpViewSwift
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 860466cb4a66854e6acb590071ecee404b48f49d
   DLRadioButton: 708964f1fa25c32182ce2c48312910a683be48f0
+  NMPopUpViewSwift: 23a44d6db17a9abc6b806f9fac597be6d7e9f300
 
 COCOAPODS: 0.39.0

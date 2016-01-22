@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '890B9B95FE77261CF64D11AC'
-               BlueprintName = 'ActionSheetPicker-3.0'
+               BlueprintIdentifier = 'FBE39BC91C9F3E4BB1F68026'
+               BlueprintName = 'NMPopUpViewSwift-NMPopUpViewSwift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ActionSheetPicker_3_0.framework'>
+               BuildableName = 'NMPopUpViewSwift.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

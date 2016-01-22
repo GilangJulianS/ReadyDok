@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ReadyDok/ActionSheetPicker_3_0.framework"
   install_framework "Pods-ReadyDok/DLRadioButton.framework"
+  install_framework "Pods-ReadyDok/NMPopUpViewSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ReadyDok/ActionSheetPicker_3_0.framework"
   install_framework "Pods-ReadyDok/DLRadioButton.framework"
+  install_framework "Pods-ReadyDok/NMPopUpViewSwift.framework"
 fi

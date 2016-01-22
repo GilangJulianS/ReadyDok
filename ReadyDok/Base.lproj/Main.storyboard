@@ -489,7 +489,7 @@
         <!--Search Results-->
         <scene sceneID="lcq-EP-L6C">
             <objects>
-                <viewController id="O61-jp-XTp" sceneMemberID="viewController">
+                <viewController id="O61-jp-XTp" customClass="DoctorNotFoundViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZS3-t2-qvg"/>
                         <viewControllerLayoutGuide type="bottom" id="vBg-mt-Z4p"/>
@@ -546,6 +546,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSubmitClicked:" destination="O61-jp-XTp" eventType="touchUpInside" id="6Ib-Gb-e3R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -573,10 +576,80 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search Results" id="Lch-et-SrZ"/>
+                    <connections>
+                        <outlet property="txtTitle" destination="day-P7-rxR" id="E0E-HN-MA7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTh-PX-tEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TWO-1D-rhm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5110" y="-363"/>
+        </scene>
+        <!--Add Suggestion Popup View Controller-->
+        <scene sceneID="kVm-Oe-trB">
+            <objects>
+                <viewController storyboardIdentifier="AddSuggestionPopupViewController" id="Me0-vZ-Ja1" customClass="AddSuggestionPopupViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xY9-FN-jd7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ou5-rG-awv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6bu-Lq-Jl9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Suggestion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcf-dq-bPR">
+                                <rect key="frame" x="40" y="40" width="520" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c3q-eO-eUT">
+                                <rect key="frame" x="40" y="101" width="520" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="bQa-8Q-A40"/>
+                                </constraints>
+                                <string key="text">Your suggestion has been recorded
+Thank You</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUh-96-2ni">
+                                <rect key="frame" x="212" y="218" width="177" height="43"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="2gT-L0-Sfq"/>
+                                    <constraint firstAttribute="height" constant="43" id="YQ8-Eg-2Ud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="Me0-vZ-Ja1" eventType="touchUpInside" id="yih-jc-vTd"/>
+                                    <segue destination="TWO-1D-rhm" kind="unwind" unwindAction="unwindToDoctorList:" id="jgh-dI-Ac0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mcf-dq-bPR" secondAttribute="trailing" constant="20" id="1Xk-gm-7IN"/>
+                            <constraint firstItem="c3q-eO-eUT" firstAttribute="top" secondItem="mcf-dq-bPR" secondAttribute="bottom" constant="40" id="3KC-ep-xiu"/>
+                            <constraint firstItem="c3q-eO-eUT" firstAttribute="leading" secondItem="mcf-dq-bPR" secondAttribute="leading" id="DQ6-4Z-Q6t"/>
+                            <constraint firstItem="VUh-96-2ni" firstAttribute="top" secondItem="c3q-eO-eUT" secondAttribute="bottom" constant="40" id="FcD-B6-FW7"/>
+                            <constraint firstItem="c3q-eO-eUT" firstAttribute="trailing" secondItem="mcf-dq-bPR" secondAttribute="trailing" id="QS3-xI-RxU"/>
+                            <constraint firstItem="mcf-dq-bPR" firstAttribute="centerX" secondItem="6bu-Lq-Jl9" secondAttribute="centerX" id="bdK-Gp-Z2p"/>
+                            <constraint firstItem="mcf-dq-bPR" firstAttribute="top" secondItem="xY9-FN-jd7" secondAttribute="bottom" constant="20" id="fQW-CD-YX6"/>
+                            <constraint firstItem="mcf-dq-bPR" firstAttribute="leading" secondItem="6bu-Lq-Jl9" secondAttribute="leadingMargin" constant="20" id="hQt-df-aSP"/>
+                            <constraint firstItem="VUh-96-2ni" firstAttribute="centerX" secondItem="6bu-Lq-Jl9" secondAttribute="centerX" id="rXV-ia-epi"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-eR-zK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5826" y="-363"/>
         </scene>
         <!--My Reminders-->
         <scene sceneID="be3-tK-28K">
