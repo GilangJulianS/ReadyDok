@@ -56,9 +56,14 @@ class NavigationTableController: UITableViewController {
             return cell
         }else{
             let cell = tableView.dequeueReusableCellWithIdentifier("navigationCell", forIndexPath: indexPath) as! NavigationCell
-            let navItem = navItems[indexPath.row - reminders.count]
+            let index = indexPath.row - reminders.count
+            let navItem = navItems[index]
             cell.imgIcon.image = navItem.icon
             cell.txtName.text = navItem.text
+            if index > 2{
+                cell.txtCounter.hidden = true
+                cell.counterBackground.hidden = true
+            }
             return cell
         }
     }
@@ -68,6 +73,8 @@ class NavigationTableController: UITableViewController {
         if row < reminders.count{
             // Open Appointment
             performSegueWithIdentifier("open_appointment", sender: nil)
+//            reminders.removeAtIndex(row)
+//            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Top)
         }else if row == reminders.count{
             // Open My Doctors
             performSegueWithIdentifier("open_doctor", sender: nil)
@@ -76,6 +83,7 @@ class NavigationTableController: UITableViewController {
             performSegueWithIdentifier("open_reminder", sender: nil)
         }else if row == reminders.count + 2{
             // Open Promo
+            performSegueWithIdentifier("open_promo", sender: nil)
         }else if row == reminders.count + 3{
             // Open Help
         }else if row == reminders.count + 4{

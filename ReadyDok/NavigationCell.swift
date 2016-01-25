@@ -13,6 +13,8 @@ class NavigationCell: UITableViewCell {
     
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var txtName: UILabel!
+    @IBOutlet weak var counterBackground: UIImageView!
+    @IBOutlet weak var txtCounter: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

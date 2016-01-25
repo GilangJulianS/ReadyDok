@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReminderDetailTableViewCell: UITableViewCell {
+class ReminderDetailTableViewCell: UITableViewCell{
 
     @IBOutlet weak var imgDoctor: UIImageView!
     @IBOutlet weak var txtJabatan: UILabel!
@@ -16,6 +16,7 @@ class ReminderDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var txtTempat: UILabel!
     @IBOutlet weak var txtWaktu: UILabel!
     @IBOutlet weak var txtStatus: UILabel!
+    @IBOutlet weak var btnConfirm: UIButton!
     var reminderDetail: ReminderDetail?
     
     override func awakeFromNib() {
@@ -30,9 +31,12 @@ class ReminderDetailTableViewCell: UITableViewCell {
     }
     
     @IBAction func cancel(sender: UIButton) {
+    
     }
     
     @IBAction func confirm(sender: UIButton) {
+        
     }
+
     
 }

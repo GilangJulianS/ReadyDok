@@ -26,7 +26,7 @@ class DoctorResultTableViewController: UITableViewController {
     }
     
     func loadData(){
-        let image = UIImage(named: "Image")!
+        let image = UIImage(named: "doctor")!
         doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
         doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
         doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]

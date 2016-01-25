@@ -1,45 +1,33 @@
 //
-//  DoctorTableViewController.swift
+//  PromoTableViewController.swift
 //  ReadyDok
 //
-//  Created by Mac Air on 1/21/16.
+//  Created by Mac Air on 1/25/16.
 //  Copyright © 2016 gilang. All rights reserved.
 //
 
 import UIKit
 
-class DoctorTableViewController: UITableViewController {
+class PromoTableViewController: UITableViewController {
 
-    var doctors = [Doctor]()
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var promos = [Promo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadData()
+        
         if self.revealViewController() != nil{
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        loadData()
     }
 
-    func loadData(){
-        let image = UIImage(named: "doctor")!
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-        doctors += [Doctor(image: image, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung")!]
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -49,37 +37,33 @@ class DoctorTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return doctors.count
+        return promos.count
+    }
+    
+    func loadData(){
+        let image = UIImage(named: "doctor")!
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
+        promos += [Promo(image: image, tempat: "Dental Clinic", alamat: "Jl. Kebon Bibit No. 5 Bandung", promo: "Discount 50% for scaling", waktu: "21-30 Desember 2015")!]
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
-        let cell = tableView.dequeueReusableCellWithIdentifier("DoctorTableViewCell", forIndexPath: indexPath) as! DoctorTableViewCell
-        let d = doctors[row]
-        
-        cell.imageDoctor.image = d.image
-        cell.txtNama.text = d.nama
-        cell.txtJabatan.text = d.jabatan
-        cell.txtTempat.text = d.tempat
-        cell.txtAlamat.text = d.alamat
-        cell.selectionStyle = .None
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("PromoCell", forIndexPath: indexPath) as! PromoCell
+        let promo = promos[row]
+        cell.img.image = promo.image
+        cell.txtTempat.text = promo.tempat
+        cell.txtAlamat.text = promo.alamat
+        cell.txtPromo.text = promo.promo
+        cell.txtWaktu.text = promo.waktu
+
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
 
-    @IBAction func addDoctor(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("open_search", sender: nil)
-    }
-    
-    @IBAction func unwindToDoctorList(sender: UIStoryboardSegue){
-        if let _ = sender.sourceViewController as? DoctorNotFoundViewController{
-            
-        }
-    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

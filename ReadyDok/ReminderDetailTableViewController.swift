@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReminderDetailTableViewController: UITableViewController {
+class ReminderDetailTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var reminderDetails = [ReminderDetail]()
@@ -50,25 +50,52 @@ class ReminderDetailTableViewController: UITableViewController {
         cell.txtTempat.text = rd.tempat
         cell.txtStatus.text = "Status: " + rd.status
         cell.txtWaktu.text = rd.waktu
-
+        cell.btnConfirm.addTarget(self, action: "confirmReminder:", forControlEvents: .TouchUpInside)
+        cell.btnConfirm.tag = row
         return cell
     }
     
+    func confirmReminder(sender: UIButton){
+        reminderDetails.removeAtIndex(sender.tag)
+        self.tableView.reloadData()
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewControllerWithIdentifier("ConfirmAppointmentPopupViewController") as! ConfirmAppointmentPopupViewController
+        vc.modalPresentationStyle = .Popover
+        vc.preferredContentSize = CGSizeMake(600, 300)
+        let popover = vc.popoverPresentationController!
+        popover.sourceView = sender
+        let r = tableView.bounds
+        popover.sourceRect = CGRect(x: r.minX, y: r.minY, width: 0, height: 0)
+        popover.delegate = self
+        popover.permittedArrowDirections = .Up
+        presentViewController(vc, animated: true, completion: nil)
+
+    }
+    
     func loadData(){
-        let img = UIImage(named: "Image")!
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
-        reminderDetails += [ReminderDetail(image: img, nama: "drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        let img = UIImage(named: "doctor")!
+        reminderDetails += [ReminderDetail(image: img, nama: "1drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "2drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "3drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "4drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "5drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "6drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "7drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "8drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "9drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "10drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
+        reminderDetails += [ReminderDetail(image: img, nama: "11drg. Melania N., Sp. KG", jabatan: "Dokter Gigi", tempat: "Dental Clinic", waktu: "Wed, 19 Dec 2015 - 19.00", status: "Pending")!]
         
     }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    func dismiss(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
