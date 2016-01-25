@@ -21,7 +21,13 @@ class CancelAppointmentPopupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func cancelAppointment(sender: UIButton) {
+        
+    }
+    
+    @IBAction func dismiss(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

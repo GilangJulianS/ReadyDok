@@ -22,7 +22,7 @@ class AddSuggestionPopupViewController: UIViewController {
     }
     
     @IBAction func dismiss(sender: UIButton) {
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*

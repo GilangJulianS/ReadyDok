@@ -52,7 +52,25 @@ class ReminderDetailTableViewController: UITableViewController, UIPopoverPresent
         cell.txtWaktu.text = rd.waktu
         cell.btnConfirm.addTarget(self, action: "confirmReminder:", forControlEvents: .TouchUpInside)
         cell.btnConfirm.tag = row
+        cell.btnCancel.addTarget(self, action: "cancelReminder:", forControlEvents: .TouchUpInside)
+        cell.btnCancel.tag = row
         return cell
+    }
+    
+    func cancelReminder(sender: UIButton){
+        reminderDetails.removeAtIndex(sender.tag)
+        self.tableView.reloadData()
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewControllerWithIdentifier("CancelAppointmentPopupViewController") as! CancelAppointmentPopupViewController
+        vc.modalPresentationStyle = .Popover
+        vc.preferredContentSize = CGSizeMake(600, 450)
+        let popover = vc.popoverPresentationController!
+        popover.sourceView = sender
+        let r = tableView.bounds
+        popover.sourceRect = CGRect(x: r.minX, y: r.minY, width: 0, height: 0)
+        popover.delegate = self
+        popover.permittedArrowDirections = .Up
+        presentViewController(vc, animated: true, completion: nil)
     }
     
     func confirmReminder(sender: UIButton){

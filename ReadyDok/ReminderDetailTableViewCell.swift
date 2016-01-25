@@ -17,6 +17,8 @@ class ReminderDetailTableViewCell: UITableViewCell{
     @IBOutlet weak var txtWaktu: UILabel!
     @IBOutlet weak var txtStatus: UILabel!
     @IBOutlet weak var btnConfirm: UIButton!
+    @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var btnReschedule: UIButton!
     var reminderDetail: ReminderDetail?
     
     override func awakeFromNib() {
