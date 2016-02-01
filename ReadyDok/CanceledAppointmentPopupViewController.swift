@@ -10,6 +10,7 @@ import UIKit
 
 class CanceledAppointmentPopupViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,11 @@ class CanceledAppointmentPopupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    @IBAction func dismiss(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -143,7 +143,7 @@
             <objects>
                 <tableViewController id="ldr-VH-8si" customClass="DoctorTableViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" id="GKI-0K-mfi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -245,7 +245,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Doctors" id="VR0-Fu-Thf">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="MIW-sC-rGK"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="scO-zE-Ic6">
+                        <barButtonItem key="rightBarButtonItem" image="search" id="scO-zE-Ic6">
+                            <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                             <connections>
                                 <action selector="addDoctor:" destination="ldr-VH-8si" id="Wkg-NR-EUO"/>
                                 <segue destination="8AW-ov-3ey" kind="presentation" identifier="open_search" id="QUE-tl-3DK"/>
@@ -260,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="2593" y="-643"/>
         </scene>
-        <!--Add Doctor-->
+        <!--Search Doctor-->
         <scene sceneID="Dpx-PT-w55">
             <objects>
                 <viewController id="wx7-hU-qzC" customClass="AddDoctorViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
@@ -380,7 +381,7 @@
                             <constraint firstItem="35X-Us-4Ti" firstAttribute="trailing" secondItem="isy-It-aE2" secondAttribute="trailing" id="riq-pb-V6F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Doctor" id="1XY-ch-1hi">
+                    <navigationItem key="navigationItem" title="Search Doctor" id="1XY-ch-1hi">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iVY-Al-iBX">
                             <connections>
                                 <action selector="onCancelClicked:" destination="wx7-hU-qzC" id="IIb-hS-kel"/>
@@ -855,19 +856,19 @@ Thank You</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jl. Kebon Bibit No.5 Bandung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-8C-qc8">
                                             <rect key="frame" x="113" y="48" width="473" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount 5% for scaling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzy-7d-RPb">
                                             <rect key="frame" x="113" y="71" width="473" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 - 30 Desember 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kna-Oq-LDL">
                                             <rect key="frame" x="113" y="96" width="473" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1016,25 +1017,25 @@ Silahkan datang sesuai jadwal.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drg. Melania N., Sp. KG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-pM-P0J">
                                 <rect key="frame" x="40" y="102" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqM-zi-P5o">
                                 <rect key="frame" x="40" y="128" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 21 Des 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb1-op-n0t">
                                 <rect key="frame" x="40" y="157" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlx-gP-kbm">
                                 <rect key="frame" x="40" y="183" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Are you sure want to cancel this appointment?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-Uh-cxx">
@@ -1111,6 +1112,148 @@ Silahkan datang sesuai jadwal.</string>
             </objects>
             <point key="canvasLocation" x="1759" y="-2718"/>
         </scene>
+        <!--Reschedule View Controller-->
+        <scene sceneID="HRR-XT-9x2">
+            <objects>
+                <viewController id="O21-3Q-qXs" customClass="RescheduleViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mZ-aH-X2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="so5-bm-2QX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="awH-Xw-E5d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="670"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reschedule Appointment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-Xx-4E7">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Suitable Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8w-bT-bAD">
+                                <rect key="frame" x="20" y="97" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WJL-cW-sdY">
+                                <rect key="frame" x="20" y="167" width="560" height="1"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="RWo-nW-89N"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-9m-aId">
+                                <rect key="frame" x="40" y="129" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="nfe-qU-5LG"/>
+                                </constraints>
+                                <state key="normal" title="&lt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-jB-krA">
+                                <rect key="frame" x="520" y="129" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="dan-Bp-1ux"/>
+                                </constraints>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 17 Des 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekw-mc-2cK">
+                                <rect key="frame" x="100" y="136" width="402" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-p4-dDy">
+                                <rect key="frame" x="20" y="204" width="560" height="285"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="IdI-yi-Xnb"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="hj9-ZJ-kjo" kind="embed" identifier="collection_segue" id="fNb-U8-ea9"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wMB-Xx-4E7" secondAttribute="trailing" id="1Pn-M9-YRV"/>
+                            <constraint firstItem="9Ij-9m-aId" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="15" id="1z8-5O-cMT"/>
+                            <constraint firstItem="Ekw-mc-2cK" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="22" id="6l4-Fs-B2X"/>
+                            <constraint firstItem="Ekw-mc-2cK" firstAttribute="leading" secondItem="9Ij-9m-aId" secondAttribute="trailing" constant="14" id="BKn-U7-eva"/>
+                            <constraint firstItem="6gZ-jB-krA" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="15" id="G2Q-hb-8Yu"/>
+                            <constraint firstItem="9Ij-9m-aId" firstAttribute="leading" secondItem="awH-Xw-E5d" secondAttribute="leadingMargin" constant="20" id="IvP-Eh-ei8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wMB-Xx-4E7" secondAttribute="leading" id="O82-qD-oJa"/>
+                            <constraint firstItem="WJL-cW-sdY" firstAttribute="top" secondItem="Ekw-mc-2cK" secondAttribute="bottom" constant="14" id="SG1-JM-eC6"/>
+                            <constraint firstItem="6gZ-jB-krA" firstAttribute="leading" secondItem="Ekw-mc-2cK" secondAttribute="trailing" constant="18" id="ThH-8Y-gwl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WJL-cW-sdY" secondAttribute="leading" id="dAu-nj-PGh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P8w-bT-bAD" secondAttribute="trailing" id="nis-YT-2MP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sDI-p4-dDy" secondAttribute="leading" id="o42-Md-wg8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WJL-cW-sdY" secondAttribute="trailing" id="ocd-9B-7ef"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6gZ-jB-krA" secondAttribute="trailing" constant="14" id="or1-qB-p4v"/>
+                            <constraint firstItem="P8w-bT-bAD" firstAttribute="top" secondItem="wMB-Xx-4E7" secondAttribute="bottom" constant="4" id="puE-f7-VCz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sDI-p4-dDy" secondAttribute="trailing" id="tqb-vA-wBv"/>
+                            <constraint firstItem="wMB-Xx-4E7" firstAttribute="top" secondItem="6mZ-aH-X2y" secondAttribute="bottom" constant="8" id="v6a-Mo-I98"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="P8w-bT-bAD" secondAttribute="leading" id="wZY-Jm-0VJ"/>
+                            <constraint firstItem="sDI-p4-dDy" firstAttribute="top" secondItem="WJL-cW-sdY" secondAttribute="bottom" constant="36" id="z5Z-jb-tFM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHc-3w-HaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2445" y="-2643"/>
+        </scene>
+        <!--Hour Collection View Controller-->
+        <scene sceneID="4IP-Xj-fXY">
+            <objects>
+                <collectionViewController id="hj9-ZJ-kjo" customClass="HourCollectionViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fT1-Ol-T3W">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="285"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="em9-oE-gvE">
+                            <size key="itemSize" width="107" height="47"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourCell" id="v77-2r-ZD6" customClass="HourCell" customModule="ReadyDok" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="107" height="47"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-Ir-b9E">
+                                            <rect key="frame" x="0.0" y="0.0" width="107" height="47"/>
+                                            <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Hak-Ir-b9E" firstAttribute="top" secondItem="v77-2r-ZD6" secondAttribute="top" id="Du9-Bu-Qw3"/>
+                                    <constraint firstItem="Hak-Ir-b9E" firstAttribute="leading" secondItem="v77-2r-ZD6" secondAttribute="leading" id="WM4-ZH-KVI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hak-Ir-b9E" secondAttribute="trailing" id="ee8-TP-9Ai"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hak-Ir-b9E" secondAttribute="bottom" id="fyx-z0-ol9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="txtHour" destination="Hak-Ir-b9E" id="ZsH-ZX-z86"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hj9-ZJ-kjo" id="yCA-Sc-Zf5"/>
+                            <outlet property="delegate" destination="hj9-ZJ-kjo" id="ZxB-HT-JxE"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yn-zb-Zoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3122" y="-2610"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="fhj-1S-SeI">
             <objects>
@@ -1161,7 +1304,7 @@ Silahkan datang sesuai jadwal.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drg. Melania N., Sp. KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6M-Um-lbk">
                                 <rect key="frame" x="120" y="114" width="460" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-fh-Qb8">
@@ -1173,13 +1316,13 @@ Silahkan datang sesuai jadwal.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 21 Des 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FH-fq-Ohz">
                                 <rect key="frame" x="20" y="182" width="560" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-qA-Czb">
                                 <rect key="frame" x="20" y="201" width="560" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCH-Qt-ZtS">
@@ -1202,6 +1345,9 @@ Silahkan datang sesuai jadwal.</string>
                                 <state key="normal" title="Reschedule">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="reschedule:" destination="7h5-NM-6tR" eventType="touchUpInside" id="xFa-Gl-c1R"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBS-Pu-hPM">
                                 <rect key="frame" x="20" y="171" width="560" height="1"/>
@@ -1220,6 +1366,9 @@ Silahkan datang sesuai jadwal.</string>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ldr-VH-8si" kind="show" id="C5y-MF-HWd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1265,6 +1414,7 @@ Silahkan datang sesuai jadwal.</string>
                     <size key="freeformSize" width="600" height="670"/>
                     <connections>
                         <outlet property="menuButton" destination="ooI-Ey-xGU" id="MG5-bT-DlK"/>
+                        <segue destination="O21-3Q-qXs" kind="show" identifier="open_reschedule" id="sqE-fI-Ym8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AB6-7J-ThK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1274,7 +1424,7 @@ Silahkan datang sesuai jadwal.</string>
         <!--Canceled Appointment Popup View Controller-->
         <scene sceneID="Rrk-0t-2uQ">
             <objects>
-                <viewController id="TJ7-xh-vaU" customClass="CanceledAppointmentPopupViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CanceledAppointmentPopupViewController" id="TJ7-xh-vaU" customClass="CanceledAppointmentPopupViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdl-lb-CrJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Cg9-k0-iZQ"/>
@@ -1286,7 +1436,7 @@ Silahkan datang sesuai jadwal.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment Canceled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-Gw-PuA">
                                 <rect key="frame" x="20" y="28" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The appointment has been canceled" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xka-Dn-ekJ">
@@ -1306,8 +1456,18 @@ Silahkan datang sesuai jadwal.</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-bx-f8D">
-                                <rect key="frame" x="285" y="177" width="30" height="30"/>
-                                <state key="normal" title="OK"/>
+                                <rect key="frame" x="212" y="177" width="177" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3Fq-QF-qwB"/>
+                                    <constraint firstAttribute="width" constant="177" id="JPY-bQ-I3B"/>
+                                </constraints>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="TJ7-xh-vaU" eventType="touchUpInside" id="UUP-WH-xcP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1371,7 +1531,6 @@ Silahkan datang sesuai jadwal.</string>
         <!--Navigation Controller-->
         <scene sceneID="RWd-3H-aCw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0OO-gg-MsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dk9-zJ-PAn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oR0-91-geA">
@@ -1383,6 +1542,7 @@ Silahkan datang sesuai jadwal.</string>
                         <segue destination="7h5-NM-6tR" kind="relationship" relationship="rootViewController" id="2xt-K6-2My"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OO-gg-MsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781" y="-1392"/>
         </scene>
@@ -1422,14 +1582,29 @@ Silahkan datang sesuai jadwal.</string>
             </objects>
             <point key="canvasLocation" x="1801" y="1080"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Fzu-od-PhD">
+            <objects>
+                <viewController id="dwg-HU-a9C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ljz-5t-edp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOM-Au-HUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="500" height="336"/>
         <image name="doctor" width="83" height="83"/>
         <image name="menu" width="22" height="22"/>
         <image name="peta" width="331" height="207"/>
+        <image name="search" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Jkt-Z4-nS1"/>
+        <segue reference="C5y-MF-HWd"/>
     </inferredMetricsTieBreakers>
 </document>
