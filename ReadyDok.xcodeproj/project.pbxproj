@@ -37,6 +37,7 @@
 		A68E7DEC1C5F26FD00755982 /* HourCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68E7DEB1C5F26FD00755982 /* HourCollectionViewController.swift */; };
 		A68E7DF01C5F29D700755982 /* RescheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68E7DEF1C5F29D700755982 /* RescheduleViewController.swift */; };
 		A68E7DF21C5F2EB500755982 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68E7DF11C5F2EB500755982 /* HourCell.swift */; };
+		A68E7DF41C5F517E00755982 /* ReschedulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68E7DF31C5F517E00755982 /* ReschedulePopupViewController.swift */; };
 		A6B5B54F1C539A8D000F6558 /* ConfirmAppointmentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B5B54E1C539A8D000F6558 /* ConfirmAppointmentPopupViewController.swift */; };
 		A6DBD2681C4F517A002D19BF /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2671C4F517A002D19BF /* Reminder.swift */; };
 		A6DBD26A1C4F52C4002D19BF /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */; };
@@ -90,6 +91,7 @@
 		A68E7DEB1C5F26FD00755982 /* HourCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCollectionViewController.swift; sourceTree = "<group>"; };
 		A68E7DEF1C5F29D700755982 /* RescheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RescheduleViewController.swift; sourceTree = "<group>"; };
 		A68E7DF11C5F2EB500755982 /* HourCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
+		A68E7DF31C5F517E00755982 /* ReschedulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReschedulePopupViewController.swift; sourceTree = "<group>"; };
 		A6B5B54E1C539A8D000F6558 /* ConfirmAppointmentPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmAppointmentPopupViewController.swift; sourceTree = "<group>"; };
 		A6DBD2671C4F517A002D19BF /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		A6DBD2691C4F52C4002D19BF /* NavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				A6B5B54E1C539A8D000F6558 /* ConfirmAppointmentPopupViewController.swift */,
 				A60D36B11C560A6B00925A1F /* CancelAppointmentPopupViewController.swift */,
 				A60D36B31C560CDD00925A1F /* CanceledAppointmentPopupViewController.swift */,
+				A68E7DF31C5F517E00755982 /* ReschedulePopupViewController.swift */,
 			);
 			name = "Popup Controller";
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68E7DF41C5F517E00755982 /* ReschedulePopupViewController.swift in Sources */,
 				A615E3721C510BC100BAC808 /* AppointmentViewController.swift in Sources */,
 				A60D36B81C560FFE00925A1F /* PromoCell.swift in Sources */,
 				A68787061C52792300DCCFA5 /* DoctorResultTableViewController.swift in Sources */,

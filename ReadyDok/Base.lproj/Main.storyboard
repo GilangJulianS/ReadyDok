@@ -989,6 +989,109 @@ Silahkan datang sesuai jadwal.</string>
             </objects>
             <point key="canvasLocation" x="1759" y="-1939"/>
         </scene>
+        <!--Reschedule Popup View Controller-->
+        <scene sceneID="QT5-cL-KHr">
+            <objects>
+                <viewController storyboardIdentifier="ReschedulePopupViewController" id="fss-Gb-Px7" customClass="ReschedulePopupViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ekr-bh-nkP"/>
+                        <viewControllerLayoutGuide type="bottom" id="I3G-wH-ygf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Rh-w2-iVR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reschedule Appointment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-du-Zeh">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your appointment successfully rescheduled to:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-CO-MT9">
+                                <rect key="frame" x="20" y="57" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drg. Melania N., Sp. KG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-Nq-luI">
+                                <rect key="frame" x="20" y="105" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBM-WJ-gcB">
+                                <rect key="frame" x="20" y="125" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 21 Des 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-PB-KAI">
+                                <rect key="frame" x="20" y="150" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cei-0l-v5Q">
+                                <rect key="frame" x="20" y="170" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-Fn-DaT">
+                                <rect key="frame" x="20" y="190" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXI-t9-iOD">
+                                <rect key="frame" x="212" y="215" width="177" height="43"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="GwV-b1-TQy"/>
+                                    <constraint firstAttribute="height" constant="43" id="e6C-uq-iI4"/>
+                                </constraints>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="fss-Gb-Px7" eventType="touchUpInside" id="2WV-dJ-mLK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aBM-WJ-gcB" firstAttribute="leading" secondItem="qTg-Nq-luI" secondAttribute="leading" id="2Yz-qD-Hhv"/>
+                            <constraint firstItem="cei-0l-v5Q" firstAttribute="top" secondItem="jwC-PB-KAI" secondAttribute="bottom" constant="3" id="6qA-Kj-8ER"/>
+                            <constraint firstItem="cei-0l-v5Q" firstAttribute="leading" secondItem="jwC-PB-KAI" secondAttribute="leading" id="7DR-nw-w70"/>
+                            <constraint firstItem="qTg-Nq-luI" firstAttribute="leading" secondItem="4iR-CO-MT9" secondAttribute="leading" id="8sA-6O-tva"/>
+                            <constraint firstItem="jwC-PB-KAI" firstAttribute="leading" secondItem="aBM-WJ-gcB" secondAttribute="leading" id="9Bs-kj-8cQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4iR-CO-MT9" secondAttribute="leading" id="ELP-XF-lqd"/>
+                            <constraint firstItem="x4E-du-Zeh" firstAttribute="top" secondItem="ekr-bh-nkP" secondAttribute="bottom" constant="8" id="FQw-Nc-I0W"/>
+                            <constraint firstItem="wRa-Fn-DaT" firstAttribute="trailing" secondItem="cei-0l-v5Q" secondAttribute="trailing" id="Hde-7c-2bX"/>
+                            <constraint firstItem="wRa-Fn-DaT" firstAttribute="top" secondItem="cei-0l-v5Q" secondAttribute="bottom" constant="3" id="Irb-Jm-TSk"/>
+                            <constraint firstItem="aBM-WJ-gcB" firstAttribute="top" secondItem="qTg-Nq-luI" secondAttribute="bottom" constant="3" id="KaU-sf-ofa"/>
+                            <constraint firstItem="qTg-Nq-luI" firstAttribute="trailing" secondItem="4iR-CO-MT9" secondAttribute="trailing" id="QAa-N4-dRH"/>
+                            <constraint firstItem="4iR-CO-MT9" firstAttribute="top" secondItem="x4E-du-Zeh" secondAttribute="bottom" constant="8" id="WA4-mT-7kO"/>
+                            <constraint firstItem="CXI-t9-iOD" firstAttribute="top" secondItem="wRa-Fn-DaT" secondAttribute="bottom" constant="8" id="Wjt-ga-c0T"/>
+                            <constraint firstItem="wRa-Fn-DaT" firstAttribute="leading" secondItem="cei-0l-v5Q" secondAttribute="leading" id="Zps-bt-SHY"/>
+                            <constraint firstItem="jwC-PB-KAI" firstAttribute="trailing" secondItem="aBM-WJ-gcB" secondAttribute="trailing" id="b3C-7W-hqt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x4E-du-Zeh" secondAttribute="trailing" id="buW-Le-yLL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4iR-CO-MT9" secondAttribute="trailing" id="cbW-mU-x1q"/>
+                            <constraint firstItem="aBM-WJ-gcB" firstAttribute="trailing" secondItem="qTg-Nq-luI" secondAttribute="trailing" id="mVO-wt-qJy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="x4E-du-Zeh" secondAttribute="leading" id="nvz-nP-Iyx"/>
+                            <constraint firstItem="qTg-Nq-luI" firstAttribute="top" secondItem="4iR-CO-MT9" secondAttribute="bottom" constant="31" id="saU-4n-iwt"/>
+                            <constraint firstItem="jwC-PB-KAI" firstAttribute="top" secondItem="aBM-WJ-gcB" secondAttribute="bottom" constant="8" symbolic="YES" id="x5z-8H-BoI"/>
+                            <constraint firstItem="cei-0l-v5Q" firstAttribute="trailing" secondItem="jwC-PB-KAI" secondAttribute="trailing" id="xEF-ia-BWv"/>
+                            <constraint firstItem="CXI-t9-iOD" firstAttribute="centerX" secondItem="7Rh-w2-iVR" secondAttribute="centerX" id="xll-vp-SQO"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="280"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOF-u7-fiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="-2146"/>
+        </scene>
         <!--Cancel Appointment Popup View Controller-->
         <scene sceneID="LBl-o9-6zZ">
             <objects>
@@ -1172,19 +1275,51 @@ Silahkan datang sesuai jadwal.</string>
                                     <segue destination="hj9-ZJ-kjo" kind="embed" identifier="collection_segue" id="fNb-U8-ea9"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB9-ct-np6">
+                                <rect key="frame" x="213" y="497" width="177" height="43"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="UkC-e1-bNh"/>
+                                    <constraint firstAttribute="width" constant="177" id="k9q-VY-sCL"/>
+                                </constraints>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="O21-3Q-qXs" eventType="touchUpInside" id="FbU-It-j2Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcr-cl-tYC">
+                                <rect key="frame" x="212" y="548" width="177" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="EiQ-Uv-uef"/>
+                                    <constraint firstAttribute="width" constant="177" id="Oun-pm-Hxu"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ldr-VH-8si" kind="show" id="8Ry-BS-Bwy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VB9-ct-np6" firstAttribute="centerX" secondItem="Ekw-mc-2cK" secondAttribute="centerX" id="093-Qg-Cab"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wMB-Xx-4E7" secondAttribute="trailing" id="1Pn-M9-YRV"/>
                             <constraint firstItem="9Ij-9m-aId" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="15" id="1z8-5O-cMT"/>
                             <constraint firstItem="Ekw-mc-2cK" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="22" id="6l4-Fs-B2X"/>
                             <constraint firstItem="Ekw-mc-2cK" firstAttribute="leading" secondItem="9Ij-9m-aId" secondAttribute="trailing" constant="14" id="BKn-U7-eva"/>
                             <constraint firstItem="6gZ-jB-krA" firstAttribute="top" secondItem="P8w-bT-bAD" secondAttribute="bottom" constant="15" id="G2Q-hb-8Yu"/>
+                            <constraint firstItem="Zcr-cl-tYC" firstAttribute="centerX" secondItem="sDI-p4-dDy" secondAttribute="centerX" id="HTQ-my-i1O"/>
                             <constraint firstItem="9Ij-9m-aId" firstAttribute="leading" secondItem="awH-Xw-E5d" secondAttribute="leadingMargin" constant="20" id="IvP-Eh-ei8"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wMB-Xx-4E7" secondAttribute="leading" id="O82-qD-oJa"/>
+                            <constraint firstItem="VB9-ct-np6" firstAttribute="top" secondItem="sDI-p4-dDy" secondAttribute="bottom" constant="8" symbolic="YES" id="QYS-5y-gKn"/>
                             <constraint firstItem="WJL-cW-sdY" firstAttribute="top" secondItem="Ekw-mc-2cK" secondAttribute="bottom" constant="14" id="SG1-JM-eC6"/>
                             <constraint firstItem="6gZ-jB-krA" firstAttribute="leading" secondItem="Ekw-mc-2cK" secondAttribute="trailing" constant="18" id="ThH-8Y-gwl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WJL-cW-sdY" secondAttribute="leading" id="dAu-nj-PGh"/>
+                            <constraint firstItem="Zcr-cl-tYC" firstAttribute="top" secondItem="VB9-ct-np6" secondAttribute="bottom" constant="8" symbolic="YES" id="hTG-B8-gTI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P8w-bT-bAD" secondAttribute="trailing" id="nis-YT-2MP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sDI-p4-dDy" secondAttribute="leading" id="o42-Md-wg8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WJL-cW-sdY" secondAttribute="trailing" id="ocd-9B-7ef"/>
@@ -1196,10 +1331,14 @@ Silahkan datang sesuai jadwal.</string>
                             <constraint firstItem="sDI-p4-dDy" firstAttribute="top" secondItem="WJL-cW-sdY" secondAttribute="bottom" constant="36" id="z5Z-jb-tFM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnOk" destination="VB9-ct-np6" id="nPH-Q6-kS8"/>
+                        <segue destination="ldr-VH-8si" kind="show" identifier="reschedule_to_doctor" id="h47-Jc-OOw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHc-3w-HaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2445" y="-2643"/>
+            <point key="canvasLocation" x="3289" y="-1392"/>
         </scene>
         <!--Hour Collection View Controller-->
         <scene sceneID="4IP-Xj-fXY">
@@ -1223,7 +1362,7 @@ Silahkan datang sesuai jadwal.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="107" height="47"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-Ir-b9E">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fH4-gk-0bl">
                                             <rect key="frame" x="0.0" y="0.0" width="107" height="47"/>
                                             <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1233,14 +1372,8 @@ Silahkan datang sesuai jadwal.</string>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="Hak-Ir-b9E" firstAttribute="top" secondItem="v77-2r-ZD6" secondAttribute="top" id="Du9-Bu-Qw3"/>
-                                    <constraint firstItem="Hak-Ir-b9E" firstAttribute="leading" secondItem="v77-2r-ZD6" secondAttribute="leading" id="WM4-ZH-KVI"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hak-Ir-b9E" secondAttribute="trailing" id="ee8-TP-9Ai"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hak-Ir-b9E" secondAttribute="bottom" id="fyx-z0-ol9"/>
-                                </constraints>
                                 <connections>
-                                    <outlet property="txtHour" destination="Hak-Ir-b9E" id="ZsH-ZX-z86"/>
+                                    <outlet property="txtHour" destination="fH4-gk-0bl" id="SFV-w2-8Dh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1252,7 +1385,7 @@ Silahkan datang sesuai jadwal.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yn-zb-Zoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="-2610"/>
+            <point key="canvasLocation" x="3966" y="-1359.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="fhj-1S-SeI">
@@ -1604,7 +1737,7 @@ Silahkan datang sesuai jadwal.</string>
         <image name="search" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="h47-Jc-OOw"/>
         <segue reference="Jkt-Z4-nS1"/>
-        <segue reference="C5y-MF-HWd"/>
     </inferredMetricsTieBreakers>
 </document>

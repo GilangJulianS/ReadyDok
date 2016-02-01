@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RescheduleViewController: UIViewController {
+class RescheduleViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
+    @IBOutlet weak var btnOk: UIButton!
     var collectionController : HourCollectionViewController!
     
     override func viewDidLoad() {
@@ -23,6 +24,29 @@ class RescheduleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func submit(sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewControllerWithIdentifier("ReschedulePopupViewController") as! ReschedulePopupViewController
+        vc.modalPresentationStyle = .Popover
+        vc.preferredContentSize = CGSizeMake(600, 280)
+        let popover = vc.popoverPresentationController!
+        popover.sourceView = btnOk
+        let r = btnOk.bounds
+        popover.sourceRect = CGRect(x: r.minX, y: r.minY, width: r.width, height: r.height)
+        popover.delegate = self
+        popover.permittedArrowDirections = .Unknown
+        presentViewController(vc, animated: true, completion: nil)
+        performSegueWithIdentifier("reschedule_to_doctor", sender: self)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    func dismiss(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "collection_segue"{
             collectionController = segue.destinationViewController as! HourCollectionViewController

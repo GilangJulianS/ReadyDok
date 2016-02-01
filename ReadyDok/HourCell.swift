@@ -10,5 +10,6 @@ import UIKit
 
 class HourCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var txtHour: UILabel!
 }

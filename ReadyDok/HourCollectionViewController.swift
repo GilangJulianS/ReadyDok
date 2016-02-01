@@ -15,6 +15,9 @@ class HourCollectionViewController: UICollectionViewController {
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let reuseIdentifier = "HourCell"
     var items = [Hour]()
+    var selectedIndex = -1;
+    let selectedColor = UIColor(red: 236/255, green: 138/255, blue: 38/255, alpha: 1.0)
+    let normalColor = UIColor(red: 71.0/255, green: 183.0/255, blue: 170.0/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,8 +109,23 @@ class HourCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! HourCell
         cell.txtHour.text = items[row].value
         // Configure the cell
-    
+        if row == selectedIndex{
+            cell.txtHour.backgroundColor = selectedColor
+        }else{
+            cell.txtHour.backgroundColor = normalColor
+        }
+        
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        selectedIndex = indexPath.row
+        collectionView.reloadData()
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        selectedIndex = -1
+        collectionView.reloadData()
     }
 
     // MARK: UICollectionViewDelegate
@@ -119,12 +137,12 @@ class HourCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
