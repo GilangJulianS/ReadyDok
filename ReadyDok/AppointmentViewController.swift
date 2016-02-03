@@ -31,14 +31,19 @@ class AppointmentViewController: UIViewController {
     @IBAction func reschedule(sender: UIButton) {
         performSegueWithIdentifier("open_reschedule", sender: sender)
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "open_reschedule"{
+            if let rescheduleView = segue.destinationViewController as? RescheduleViewController{
+                rescheduleView.type = rescheduleView.TYPE_FROM_DOCTOR
+            }
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

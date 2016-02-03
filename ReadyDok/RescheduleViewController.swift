@@ -11,7 +11,10 @@ import UIKit
 class RescheduleViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var btnOk: UIButton!
+    let TYPE_FROM_DOCTOR = 0
+    let TYPE_FROM_REMINDER = 1
     var collectionController : HourCollectionViewController!
+    var type = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,19 @@ class RescheduleViewController: UIViewController, UIPopoverPresentationControlle
         popover.delegate = self
         popover.permittedArrowDirections = .Unknown
         presentViewController(vc, animated: true, completion: nil)
-        performSegueWithIdentifier("reschedule_to_doctor", sender: self)
+        if type == TYPE_FROM_DOCTOR{
+            performSegueWithIdentifier("reschedule_to_doctor", sender: self)
+        }else if type == TYPE_FROM_REMINDER{
+            performSegueWithIdentifier("reschedule_to_reminder", sender: self)
+        }
+    }
+    
+    @IBAction func cancel(sender: UIButton) {
+        if type == TYPE_FROM_DOCTOR{
+            performSegueWithIdentifier("reschedule_to_doctor", sender: nil)
+        }else if type == TYPE_FROM_REMINDER{
+            performSegueWithIdentifier("reschedule_to_reminder", sender: self)
+        }
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {

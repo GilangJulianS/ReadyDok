@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CancelAppointmentPopupViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class CancelAppointmentViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,27 +29,16 @@ class CancelAppointmentPopupViewController: UIViewController, UIPopoverPresentat
         let popover = vc.popoverPresentationController!
         popover.sourceView = view
         let r = view.bounds
-        popover.sourceRect = CGRect(x: r.minX, y: r.minY, width: 0, height: 0)
+        popover.sourceRect = CGRect(x: r.minX, y: r.minY + 100, width: 0, height: 0)
         popover.delegate = self
         popover.permittedArrowDirections = .Up
-        presentViewController(vc, animated: true, completion: close)
+        presentViewController(vc, animated: true, completion: nil)
+        
 //        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func dismiss(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func dismiss(){
-        dismissViewControllerAnimated(true, completion: nil)
     }
 
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .None
-    }
-    
-    func close(){
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     /*
     // MARK: - Navigation

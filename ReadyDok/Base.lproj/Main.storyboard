@@ -672,7 +672,7 @@ Thank You</string>
             <objects>
                 <tableViewController id="0qm-dW-B60" customClass="ReminderDetailTableViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="fyk-nC-rQe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -750,6 +750,9 @@ Thank You</string>
                                             <state key="normal" title="Reschedule">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="rescheduleReminder:" destination="0qm-dW-B60" eventType="touchUpInside" id="v58-bd-RDg"/>
+                                            </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-No-NKT">
                                             <rect key="frame" x="0.0" y="162" width="600" height="5"/>
@@ -818,6 +821,8 @@ Thank You</string>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="iNM-N7-nrp" id="BP6-Zx-nNB"/>
+                        <segue destination="AUH-cZ-5ip" kind="show" identifier="open_cancel_appointment" id="cFM-DQ-UuE"/>
+                        <segue destination="O21-3Q-qXs" kind="show" identifier="open_reschedule" id="SPz-za-mih"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI2-rS-Rrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1092,57 +1097,57 @@ Silahkan datang sesuai jadwal.</string>
             </objects>
             <point key="canvasLocation" x="2495" y="-2146"/>
         </scene>
-        <!--Cancel Appointment Popup View Controller-->
+        <!--Cancel Appointment View Controller-->
         <scene sceneID="LBl-o9-6zZ">
             <objects>
-                <viewController storyboardIdentifier="CancelAppointmentPopupViewController" id="AUH-cZ-5ip" customClass="CancelAppointmentPopupViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AUH-cZ-5ip" customClass="CancelAppointmentViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cVb-Me-lFq"/>
                         <viewControllerLayoutGuide type="bottom" id="BxY-PE-6xo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7mZ-ri-FpZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel Appointment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-ps-Kbr">
-                                <rect key="frame" x="40" y="40" width="520" height="21"/>
+                                <rect key="frame" x="40" y="84" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jap-2l-ENO">
-                                <rect key="frame" x="20" y="81" width="560" height="1"/>
+                                <rect key="frame" x="20" y="125" width="560" height="1"/>
                                 <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="osW-5O-fFI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drg. Melania N., Sp. KG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-pM-P0J">
-                                <rect key="frame" x="40" y="102" width="520" height="21"/>
+                                <rect key="frame" x="40" y="146" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqM-zi-P5o">
-                                <rect key="frame" x="40" y="128" width="520" height="21"/>
+                                <rect key="frame" x="40" y="172" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 21 Des 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb1-op-n0t">
-                                <rect key="frame" x="40" y="157" width="520" height="21"/>
+                                <rect key="frame" x="40" y="201" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 19.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlx-gP-kbm">
-                                <rect key="frame" x="40" y="183" width="520" height="21"/>
+                                <rect key="frame" x="40" y="227" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Are you sure want to cancel this appointment?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-Uh-cxx">
-                                <rect key="frame" x="40" y="224" width="520" height="66"/>
+                                <rect key="frame" x="40" y="268" width="520" height="66"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="KsT-Ab-ecP"/>
@@ -1151,7 +1156,7 @@ Silahkan datang sesuai jadwal.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb0-bA-meh">
-                                <rect key="frame" x="212" y="310" width="177" height="43"/>
+                                <rect key="frame" x="212" y="354" width="177" height="43"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="177" id="DzF-u0-Qgc"/>
@@ -1162,10 +1167,11 @@ Silahkan datang sesuai jadwal.</string>
                                 </state>
                                 <connections>
                                     <action selector="cancelAppointment:" destination="AUH-cZ-5ip" eventType="touchUpInside" id="7AY-cw-cVS"/>
+                                    <segue destination="4Kh-IZ-6g2" kind="unwind" unwindAction="unwindToReminderList:" id="o0b-Nf-QQH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-pl-O6y">
-                                <rect key="frame" x="212" y="363" width="177" height="43"/>
+                                <rect key="frame" x="212" y="407" width="177" height="43"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.54901960780000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Y1z-zS-sc7"/>
@@ -1175,7 +1181,7 @@ Silahkan datang sesuai jadwal.</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismiss:" destination="AUH-cZ-5ip" eventType="touchUpInside" id="O4U-oO-66K"/>
+                                    <segue destination="4Kh-IZ-6g2" kind="unwind" unwindAction="unwindToReminderList:" id="yhB-uh-xIh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1208,12 +1214,11 @@ Silahkan datang sesuai jadwal.</string>
                             <constraint firstItem="w0q-pM-P0J" firstAttribute="trailing" secondItem="pf1-ps-Kbr" secondAttribute="trailing" id="vJq-X6-yvE"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="450"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQD-cA-5gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4Kh-IZ-6g2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-2718"/>
+            <point key="canvasLocation" x="1759" y="-2802"/>
         </scene>
         <!--Reschedule View Controller-->
         <scene sceneID="HRR-XT-9x2">
@@ -1300,7 +1305,7 @@ Silahkan datang sesuai jadwal.</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ldr-VH-8si" kind="show" id="8Ry-BS-Bwy"/>
+                                    <action selector="cancel:" destination="O21-3Q-qXs" eventType="touchUpInside" id="JA7-QQ-aWF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1334,6 +1339,7 @@ Silahkan datang sesuai jadwal.</string>
                     <connections>
                         <outlet property="btnOk" destination="VB9-ct-np6" id="nPH-Q6-kS8"/>
                         <segue destination="ldr-VH-8si" kind="show" identifier="reschedule_to_doctor" id="h47-Jc-OOw"/>
+                        <segue destination="0qm-dW-B60" kind="show" identifier="reschedule_to_reminder" id="GIn-7b-ZLB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHc-3w-HaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1719,6 +1725,10 @@ Silahkan datang sesuai jadwal.</string>
         <scene sceneID="Fzu-od-PhD">
             <objects>
                 <viewController id="dwg-HU-a9C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UEu-WW-kZZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="eiW-b4-WPs"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ljz-5t-edp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1738,6 +1748,8 @@ Silahkan datang sesuai jadwal.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="h47-Jc-OOw"/>
+        <segue reference="sqE-fI-Ym8"/>
         <segue reference="Jkt-Z4-nS1"/>
+        <segue reference="GIn-7b-ZLB"/>
     </inferredMetricsTieBreakers>
 </document>

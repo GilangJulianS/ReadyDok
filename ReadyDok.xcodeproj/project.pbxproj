@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47B2D024B7FDDCD5796F2793 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E50E9A0A1C9AA34B167599B /* Pods.framework */; };
-		A60D36B21C560A6B00925A1F /* CancelAppointmentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D36B11C560A6B00925A1F /* CancelAppointmentPopupViewController.swift */; };
+		A60D36B21C560A6B00925A1F /* CancelAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D36B11C560A6B00925A1F /* CancelAppointmentViewController.swift */; };
 		A60D36B41C560CDD00925A1F /* CanceledAppointmentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D36B31C560CDD00925A1F /* CanceledAppointmentPopupViewController.swift */; };
 		A60D36B61C560DD100925A1F /* PromoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D36B51C560DD100925A1F /* PromoTableViewController.swift */; };
 		A60D36B81C560FFE00925A1F /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D36B71C560FFE00925A1F /* PromoCell.swift */; };
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		1C6E673C1A13861AE7FEDB01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1E50E9A0A1C9AA34B167599B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60D36B11C560A6B00925A1F /* CancelAppointmentPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelAppointmentPopupViewController.swift; sourceTree = "<group>"; };
+		A60D36B11C560A6B00925A1F /* CancelAppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelAppointmentViewController.swift; sourceTree = "<group>"; };
 		A60D36B31C560CDD00925A1F /* CanceledAppointmentPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanceledAppointmentPopupViewController.swift; sourceTree = "<group>"; };
 		A60D36B51C560DD100925A1F /* PromoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoTableViewController.swift; sourceTree = "<group>"; };
 		A60D36B71C560FFE00925A1F /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
@@ -131,7 +131,6 @@
 			children = (
 				A65CB56B1C529A5A00ECDAC1 /* AddSuggestionPopupViewController.swift */,
 				A6B5B54E1C539A8D000F6558 /* ConfirmAppointmentPopupViewController.swift */,
-				A60D36B11C560A6B00925A1F /* CancelAppointmentPopupViewController.swift */,
 				A60D36B31C560CDD00925A1F /* CanceledAppointmentPopupViewController.swift */,
 				A68E7DF31C5F517E00755982 /* ReschedulePopupViewController.swift */,
 			);
@@ -215,6 +214,7 @@
 				A68787031C51ED3000DCCFA5 /* AddDoctorViewController.swift */,
 				A65CB56D1C529B2300ECDAC1 /* DoctorNotFoundViewController.swift */,
 				A68E7DEF1C5F29D700755982 /* RescheduleViewController.swift */,
+				A60D36B11C560A6B00925A1F /* CancelAppointmentViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 				A676BB061C4F3DC1001244EF /* NavigationTableController.swift in Sources */,
 				A68E7DF01C5F29D700755982 /* RescheduleViewController.swift in Sources */,
 				A615E36A1C50D25600BAC808 /* ReminderDetailTableViewController.swift in Sources */,
-				A60D36B21C560A6B00925A1F /* CancelAppointmentPopupViewController.swift in Sources */,
+				A60D36B21C560A6B00925A1F /* CancelAppointmentViewController.swift in Sources */,
 				A68E7DF21C5F2EB500755982 /* HourCell.swift in Sources */,
 				A676BB041C4F3DC1001244EF /* AppDelegate.swift in Sources */,
 				A68787021C5159A300DCCFA5 /* Doctor.swift in Sources */,

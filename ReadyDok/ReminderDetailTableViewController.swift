@@ -57,20 +57,13 @@ class ReminderDetailTableViewController: UITableViewController, UIPopoverPresent
         return cell
     }
     
+    
+    @IBAction func rescheduleReminder(sender: UIButton) {
+        performSegueWithIdentifier("open_reschedule", sender: nil)
+    }
+    
     func cancelReminder(sender: UIButton){
-        reminderDetails.removeAtIndex(sender.tag)
-        self.tableView.reloadData()
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewControllerWithIdentifier("CancelAppointmentPopupViewController") as! CancelAppointmentPopupViewController
-        vc.modalPresentationStyle = .Popover
-        vc.preferredContentSize = CGSizeMake(600, 450)
-        let popover = vc.popoverPresentationController!
-        popover.sourceView = sender
-        let r = tableView.bounds
-        popover.sourceRect = CGRect(x: r.minX, y: r.minY, width: 0, height: 0)
-        popover.delegate = self
-        popover.permittedArrowDirections = .Up
-        presentViewController(vc, animated: true, completion: nil)
+        performSegueWithIdentifier("open_cancel_appointment", sender: sender)
     }
     
     func confirmReminder(sender: UIButton){
@@ -113,6 +106,12 @@ class ReminderDetailTableViewController: UITableViewController, UIPopoverPresent
     func dismiss(){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func unwindToReminderList(sender: UIStoryboardSegue){
+        if let _ = sender.sourceViewController as? CancelAppointmentViewController{
+            
+        }
+    }
 
 
     /*
@@ -150,14 +149,19 @@ class ReminderDetailTableViewController: UITableViewController, UIPopoverPresent
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "open_reschedule"{
+            if let rescheduleView = segue.destinationViewController as? RescheduleViewController{
+                rescheduleView.type = rescheduleView.TYPE_FROM_REMINDER
+            }
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
