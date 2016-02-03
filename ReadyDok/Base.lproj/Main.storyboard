@@ -255,6 +255,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="MIW-sC-rGK" id="5GW-yy-KFW"/>
+                        <segue destination="dWV-uZ-tUn" kind="show" identifier="open_doctor_detail" id="b5H-CW-1yt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvo-RS-qDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -599,7 +600,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTh-PX-tEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TWO-1D-rhm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5110" y="-363"/>
+            <point key="canvasLocation" x="5922" y="-363"/>
         </scene>
         <!--Add Suggestion Popup View Controller-->
         <scene sceneID="kVm-Oe-trB">
@@ -827,7 +828,7 @@ Thank You</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI2-rS-Rrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613" y="271"/>
+            <point key="canvasLocation" x="3265" y="-2121"/>
         </scene>
         <!--Promo-->
         <scene sceneID="oes-et-jTS">
@@ -919,7 +920,7 @@ Thank You</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgg-HY-Lv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613" y="1080"/>
+            <point key="canvasLocation" x="2593" y="240"/>
         </scene>
         <!--Confirm Appointment Popup View Controller-->
         <scene sceneID="abD-gY-Clp">
@@ -992,7 +993,7 @@ Silahkan datang sesuai jadwal.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccA-60-Ymr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-1939"/>
+            <point key="canvasLocation" x="5607" y="-2184"/>
         </scene>
         <!--Reschedule Popup View Controller-->
         <scene sceneID="QT5-cL-KHr">
@@ -1095,7 +1096,7 @@ Silahkan datang sesuai jadwal.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOF-u7-fiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495" y="-2146"/>
+            <point key="canvasLocation" x="5839" y="-1794"/>
         </scene>
         <!--Cancel Appointment View Controller-->
         <scene sceneID="LBl-o9-6zZ">
@@ -1218,7 +1219,7 @@ Silahkan datang sesuai jadwal.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQD-cA-5gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4Kh-IZ-6g2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-2802"/>
+            <point key="canvasLocation" x="4027" y="-2121"/>
         </scene>
         <!--Reschedule View Controller-->
         <scene sceneID="HRR-XT-9x2">
@@ -1391,7 +1392,7 @@ Silahkan datang sesuai jadwal.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yn-zb-Zoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3966" y="-1359.5"/>
+            <point key="canvasLocation" x="4022" y="-1367.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="fhj-1S-SeI">
@@ -1629,7 +1630,7 @@ Silahkan datang sesuai jadwal.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x22-vA-lEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-2284"/>
+            <point key="canvasLocation" x="5167" y="-2524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e5W-LR-SoF">
@@ -1665,7 +1666,7 @@ Silahkan datang sesuai jadwal.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsQ-fY-ewX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="271"/>
+            <point key="canvasLocation" x="1801" y="-2121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RWd-3H-aCw">
@@ -1703,6 +1704,191 @@ Silahkan datang sesuai jadwal.</string>
             </objects>
             <point key="canvasLocation" x="3289" y="-643"/>
         </scene>
+        <!--Doctor Profile-->
+        <scene sceneID="LXX-tQ-G7z">
+            <objects>
+                <viewController id="dWV-uZ-tUn" customClass="DoctorProfileViewController" customModule="ReadyDok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YTD-Lq-ToU"/>
+                        <viewControllerLayoutGuide type="bottom" id="bHL-rZ-ixU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAK-x3-jaG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="670"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUA-zz-6ED">
+                                <rect key="frame" x="0.0" y="-6" width="600" height="676"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-Ly-zu4" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="-5" width="600" height="611"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="xBX-uD-Oxz">
+                                                <rect key="frame" x="20" y="25" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="5el-L8-n9q"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ijo-nE-eeE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afD-aN-jO9">
+                                                <rect key="frame" x="550" y="20" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Baz-0X-MEN"/>
+                                                    <constraint firstAttribute="width" constant="30" id="VGn-Hl-euY"/>
+                                                </constraints>
+                                                <state key="normal" title="Map"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokter Gigi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z1-U8-ziV">
+                                                <rect key="frame" x="108" y="25" width="434" height="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drg. Melania N., Sp. KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQw-rK-c6E">
+                                                <rect key="frame" x="108" y="46" width="472" height="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-Kn-eCn">
+                                                <rect key="frame" x="108" y="69" width="472" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Jl. Kebon Bibit No.5 Bandung" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ka7-Qs-K1c">
+                                                <rect key="frame" x="108" y="87" width="472" height="33"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textContainer.lineFragmentPadding">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="rect" keyPath="textContainerInset">
+                                                        <rect key="value" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wYp-lI-qws">
+                                                <rect key="frame" x="108" y="123" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="oRu-b3-cPo"/>
+                                                    <constraint firstAttribute="width" constant="20" id="pkm-rA-2rg"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127 Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-BC-njq">
+                                                <rect key="frame" x="136" y="125" width="444" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="11j-68-Sbk">
+                                                <rect key="frame" x="0.0" y="162" width="600" height="100"/>
+                                                <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="LYN-qc-ora"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2g6-Ub-gX7">
+                                                <rect key="frame" x="212" y="191" width="177" height="43"/>
+                                                <color key="backgroundColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="pyK-TZ-ZyG"/>
+                                                    <constraint firstAttribute="width" constant="177" id="yZW-MQ-RIl"/>
+                                                </constraints>
+                                                <state key="normal" title="Book Appointment">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FS3-QE-CiU">
+                                                <rect key="frame" x="40" y="283" width="520" height="29"/>
+                                                <segments>
+                                                    <segment title="Profile"/>
+                                                    <segment title="Reviews"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.01176470588" green="0.75686274509999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="onSegmentChanged:" destination="dWV-uZ-tUn" eventType="valueChanged" id="rwt-5G-9fK"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Si-4o-sp5">
+                                                <rect key="frame" x="40" y="311" width="520" height="280"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="Knc-nj-sGG"/>
+                                                    <constraint firstAttribute="height" constant="280" id="Lh2-Rf-jhk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2g6-Ub-gX7" firstAttribute="centerX" secondItem="11j-68-Sbk" secondAttribute="centerX" id="2VR-ct-AIC"/>
+                                            <constraint firstItem="3m1-BC-njq" firstAttribute="leading" secondItem="wYp-lI-qws" secondAttribute="trailing" constant="8" id="2rW-rh-b5n"/>
+                                            <constraint firstItem="afD-aN-jO9" firstAttribute="leading" secondItem="6z1-U8-ziV" secondAttribute="trailing" constant="8" id="5Jd-GE-IXo"/>
+                                            <constraint firstItem="oQw-rK-c6E" firstAttribute="top" secondItem="6z1-U8-ziV" secondAttribute="bottom" constant="1" id="68f-cY-Xct"/>
+                                            <constraint firstAttribute="trailing" secondItem="oQw-rK-c6E" secondAttribute="trailing" constant="20" id="7AB-wW-bel"/>
+                                            <constraint firstAttribute="trailing" secondItem="FS3-QE-CiU" secondAttribute="trailing" constant="40" id="DFl-P6-Rl7"/>
+                                            <constraint firstItem="xBX-uD-Oxz" firstAttribute="top" secondItem="Xz5-Ly-zu4" secondAttribute="top" constant="25" id="E3I-mC-7GA"/>
+                                            <constraint firstItem="6z1-U8-ziV" firstAttribute="top" secondItem="Xz5-Ly-zu4" secondAttribute="top" constant="25" id="Enh-fZ-sQL"/>
+                                            <constraint firstItem="ka7-Qs-K1c" firstAttribute="top" secondItem="1hu-Kn-eCn" secondAttribute="bottom" constant="1" id="Ezy-hz-tUn"/>
+                                            <constraint firstItem="11j-68-Sbk" firstAttribute="leading" secondItem="Xz5-Ly-zu4" secondAttribute="leading" id="FoJ-J1-zp5"/>
+                                            <constraint firstItem="1hu-Kn-eCn" firstAttribute="top" secondItem="oQw-rK-c6E" secondAttribute="bottom" constant="3" id="FrH-nj-Muq"/>
+                                            <constraint firstAttribute="trailing" secondItem="afD-aN-jO9" secondAttribute="trailing" constant="20" id="Fvr-ky-Znq"/>
+                                            <constraint firstItem="wYp-lI-qws" firstAttribute="leading" secondItem="ka7-Qs-K1c" secondAttribute="leading" id="HUn-ob-oWB"/>
+                                            <constraint firstItem="3m1-BC-njq" firstAttribute="top" secondItem="ka7-Qs-K1c" secondAttribute="bottom" constant="5" id="IiY-5B-FbM"/>
+                                            <constraint firstItem="2g6-Ub-gX7" firstAttribute="centerY" secondItem="11j-68-Sbk" secondAttribute="centerY" id="Jyd-F5-2gM"/>
+                                            <constraint firstAttribute="trailing" secondItem="11j-68-Sbk" secondAttribute="trailing" id="LdK-ps-c8u"/>
+                                            <constraint firstItem="8Si-4o-sp5" firstAttribute="leading" secondItem="FS3-QE-CiU" secondAttribute="leading" id="NDq-ja-che"/>
+                                            <constraint firstItem="11j-68-Sbk" firstAttribute="top" secondItem="3m1-BC-njq" secondAttribute="bottom" constant="20" id="PQg-8E-f2M"/>
+                                            <constraint firstItem="3m1-BC-njq" firstAttribute="trailing" secondItem="ka7-Qs-K1c" secondAttribute="trailing" id="Rzj-se-7gY"/>
+                                            <constraint firstItem="8Si-4o-sp5" firstAttribute="trailing" secondItem="FS3-QE-CiU" secondAttribute="trailing" id="Uwu-S4-3EK"/>
+                                            <constraint firstItem="1hu-Kn-eCn" firstAttribute="leading" secondItem="oQw-rK-c6E" secondAttribute="leading" id="ZbC-KG-H9t"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Si-4o-sp5" secondAttribute="bottom" constant="20" id="d0G-i0-nFZ"/>
+                                            <constraint firstItem="1hu-Kn-eCn" firstAttribute="trailing" secondItem="oQw-rK-c6E" secondAttribute="trailing" id="eKU-OM-EyG"/>
+                                            <constraint firstItem="ka7-Qs-K1c" firstAttribute="leading" secondItem="1hu-Kn-eCn" secondAttribute="leading" id="fdd-fL-Abq"/>
+                                            <constraint firstItem="oQw-rK-c6E" firstAttribute="leading" secondItem="6z1-U8-ziV" secondAttribute="leading" id="mbg-uo-zEI"/>
+                                            <constraint firstItem="ka7-Qs-K1c" firstAttribute="trailing" secondItem="1hu-Kn-eCn" secondAttribute="trailing" id="nvl-pQ-a7v"/>
+                                            <constraint firstItem="FS3-QE-CiU" firstAttribute="leading" secondItem="Xz5-Ly-zu4" secondAttribute="leading" constant="40" id="nx1-Ep-MhI"/>
+                                            <constraint firstItem="FS3-QE-CiU" firstAttribute="top" secondItem="11j-68-Sbk" secondAttribute="bottom" constant="21" id="oON-bk-kE9"/>
+                                            <constraint firstItem="wYp-lI-qws" firstAttribute="top" secondItem="ka7-Qs-K1c" secondAttribute="bottom" constant="3" id="rtA-Md-zed"/>
+                                            <constraint firstItem="xBX-uD-Oxz" firstAttribute="leading" secondItem="Xz5-Ly-zu4" secondAttribute="leading" constant="20" id="srd-a2-xyB"/>
+                                            <constraint firstItem="afD-aN-jO9" firstAttribute="centerY" secondItem="6z1-U8-ziV" secondAttribute="centerY" id="vEB-Bm-gGJ"/>
+                                            <constraint firstItem="6z1-U8-ziV" firstAttribute="leading" secondItem="xBX-uD-Oxz" secondAttribute="trailing" constant="8" id="vSj-Mi-5ta"/>
+                                            <constraint firstItem="8Si-4o-sp5" firstAttribute="top" secondItem="FS3-QE-CiU" secondAttribute="bottom" id="wEz-Jm-GuY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Xz5-Ly-zu4" secondAttribute="trailing" constant="-20" id="X51-b0-1pA"/>
+                                    <constraint firstItem="Xz5-Ly-zu4" firstAttribute="top" secondItem="dUA-zz-6ED" secondAttribute="top" constant="-5" id="ahv-Ly-iRi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xz5-Ly-zu4" secondAttribute="bottom" id="cv5-Ty-QsH"/>
+                                    <constraint firstItem="Xz5-Ly-zu4" firstAttribute="leading" secondItem="dUA-zz-6ED" secondAttribute="leading" id="r7R-x8-4BM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bHL-rZ-ixU" firstAttribute="top" secondItem="dUA-zz-6ED" secondAttribute="bottom" id="EKh-Yp-lEp"/>
+                            <constraint firstItem="dUA-zz-6ED" firstAttribute="top" secondItem="YTD-Lq-ToU" secondAttribute="bottom" constant="-70" id="H9u-GY-c4y"/>
+                            <constraint firstItem="dUA-zz-6ED" firstAttribute="leading" secondItem="hAK-x3-jaG" secondAttribute="leadingMargin" constant="-20" id="Jo9-EP-yV5"/>
+                            <constraint firstAttribute="width" secondItem="Xz5-Ly-zu4" secondAttribute="width" id="LGP-wk-rap"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dUA-zz-6ED" secondAttribute="trailing" constant="-20" id="eeZ-aw-ZuW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doctor Profile" id="mbw-1z-Xvc"/>
+                    <connections>
+                        <outlet property="container" destination="8Si-4o-sp5" id="tgy-tn-wiK"/>
+                        <outlet property="contentView" destination="Xz5-Ly-zu4" id="zrP-4x-SWv"/>
+                        <outlet property="scrollView" destination="dUA-zz-6ED" id="Xqk-L3-XlE"/>
+                        <outlet property="segment" destination="FS3-QE-CiU" id="QWD-aH-qxA"/>
+                        <outlet property="txtAlamat" destination="ka7-Qs-K1c" id="ikq-M1-IJG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EuE-0v-25l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3289" y="275"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BYT-uT-Qik">
             <objects>
@@ -1719,7 +1905,7 @@ Silahkan datang sesuai jadwal.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E6-bw-xSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="1080"/>
+            <point key="canvasLocation" x="1781" y="240"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fzu-od-PhD">
@@ -1749,7 +1935,7 @@ Silahkan datang sesuai jadwal.</string>
     <inferredMetricsTieBreakers>
         <segue reference="h47-Jc-OOw"/>
         <segue reference="sqE-fI-Ym8"/>
-        <segue reference="Jkt-Z4-nS1"/>
+        <segue reference="Mr9-vs-QVW"/>
         <segue reference="GIn-7b-ZLB"/>
     </inferredMetricsTieBreakers>
 </document>

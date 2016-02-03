@@ -19,6 +19,11 @@
 		A615E36D1C50D2CE00BAC808 /* ReminderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A615E36B1C50D2CE00BAC808 /* ReminderDetailTableViewCell.swift */; };
 		A615E3701C50F78500BAC808 /* ReminderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A615E36F1C50F78500BAC808 /* ReminderDetail.swift */; };
 		A615E3721C510BC100BAC808 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A615E3711C510BC100BAC808 /* AppointmentViewController.swift */; };
+		A620AAFF1C6206EA007421E2 /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620AAFE1C6206EA007421E2 /* DoctorProfileViewController.swift */; };
+		A620AB011C6223C2007421E2 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A620AB001C6223C2007421E2 /* ProfileView.xib */; };
+		A620AB041C622408007421E2 /* ReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A620AB031C622408007421E2 /* ReviewView.xib */; };
+		A620AB061C622444007421E2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620AB051C622444007421E2 /* ProfileView.swift */; };
+		A620AB081C622454007421E2 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620AB071C622454007421E2 /* ReviewView.swift */; };
 		A65CB56C1C529A5A00ECDAC1 /* AddSuggestionPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CB56B1C529A5A00ECDAC1 /* AddSuggestionPopupViewController.swift */; };
 		A65CB56E1C529B2300ECDAC1 /* DoctorNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CB56D1C529B2300ECDAC1 /* DoctorNotFoundViewController.swift */; };
 		A676BB041C4F3DC1001244EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676BB031C4F3DC1001244EF /* AppDelegate.swift */; };
@@ -69,6 +74,11 @@
 		A615E36B1C50D2CE00BAC808 /* ReminderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A615E36F1C50F78500BAC808 /* ReminderDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDetail.swift; sourceTree = "<group>"; };
 		A615E3711C510BC100BAC808 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		A620AAFE1C6206EA007421E2 /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
+		A620AB001C6223C2007421E2 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		A620AB031C622408007421E2 /* ReviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewView.xib; sourceTree = "<group>"; };
+		A620AB051C622444007421E2 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A620AB071C622454007421E2 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		A65CB56B1C529A5A00ECDAC1 /* AddSuggestionPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestionPopupViewController.swift; sourceTree = "<group>"; };
 		A65CB56D1C529B2300ECDAC1 /* DoctorNotFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorNotFoundViewController.swift; sourceTree = "<group>"; };
 		A676BB001C4F3DC1001244EF /* ReadyDok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadyDok.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +170,17 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		A620AB021C6223CE007421E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A620AB001C6223C2007421E2 /* ProfileView.xib */,
+				A620AB031C622408007421E2 /* ReviewView.xib */,
+				A620AB051C622444007421E2 /* ProfileView.swift */,
+				A620AB071C622454007421E2 /* ReviewView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A676BAF71C4F3DC1001244EF = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +215,7 @@
 				A676BB0C1C4F3DC1001244EF /* LaunchScreen.storyboard */,
 				A676BB0F1C4F3DC1001244EF /* Info.plist */,
 				A615E35C1C50C16200BAC808 /* SWRevealViewController */,
+				A620AB021C6223CE007421E2 /* View */,
 			);
 			path = ReadyDok;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 				A65CB56D1C529B2300ECDAC1 /* DoctorNotFoundViewController.swift */,
 				A68E7DEF1C5F29D700755982 /* RescheduleViewController.swift */,
 				A60D36B11C560A6B00925A1F /* CancelAppointmentViewController.swift */,
+				A620AAFE1C6206EA007421E2 /* DoctorProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -337,6 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A620AB011C6223C2007421E2 /* ProfileView.xib in Resources */,
+				A620AB041C622408007421E2 /* ReviewView.xib in Resources */,
 				A676BB0E1C4F3DC1001244EF /* LaunchScreen.storyboard in Resources */,
 				A676BB0B1C4F3DC1001244EF /* Assets.xcassets in Resources */,
 				A676BB091C4F3DC1001244EF /* Main.storyboard in Resources */,
@@ -422,11 +447,14 @@
 				A615E36A1C50D25600BAC808 /* ReminderDetailTableViewController.swift in Sources */,
 				A60D36B21C560A6B00925A1F /* CancelAppointmentViewController.swift in Sources */,
 				A68E7DF21C5F2EB500755982 /* HourCell.swift in Sources */,
+				A620AAFF1C6206EA007421E2 /* DoctorProfileViewController.swift in Sources */,
+				A620AB061C622444007421E2 /* ProfileView.swift in Sources */,
 				A676BB041C4F3DC1001244EF /* AppDelegate.swift in Sources */,
 				A68787021C5159A300DCCFA5 /* Doctor.swift in Sources */,
 				A615E36D1C50D2CE00BAC808 /* ReminderDetailTableViewCell.swift in Sources */,
 				A65CB56C1C529A5A00ECDAC1 /* AddSuggestionPopupViewController.swift in Sources */,
 				A676BB271C4F450D001244EF /* NavigationCell.swift in Sources */,
+				A620AB081C622454007421E2 /* ReviewView.swift in Sources */,
 				A615E3621C50C4B800BAC808 /* DoctorTableViewController.swift in Sources */,
 				A68E7DEC1C5F26FD00755982 /* HourCollectionViewController.swift in Sources */,
 				A6DBD26A1C4F52C4002D19BF /* NavigationItem.swift in Sources */,

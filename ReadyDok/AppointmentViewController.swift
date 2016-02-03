@@ -11,6 +11,7 @@ import UIKit
 class AppointmentViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var navbarColor = UIColor(red: 67/255, green: 171/255, blue: 153/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()

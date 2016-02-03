@@ -68,7 +68,7 @@ class DoctorTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        performSegueWithIdentifier("open_doctor_detail", sender: nil)
     }
 
     @IBAction func addDoctor(sender: UIBarButtonItem) {
